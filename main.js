@@ -28,7 +28,7 @@ $(function () {
       });
       console.log(getImg);
     } else {
-      console.log('hey');
+      console.error('NO URL FOUNDED');
     }
   }
 
