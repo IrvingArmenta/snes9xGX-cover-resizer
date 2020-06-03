@@ -1,11 +1,11 @@
 // main.js
 import './styles/main.sass';
-import $ from "cash-dom";
+import $ from 'cash-dom';
 
 $(function () {
 
-  var $uploadFileInput = $("#uploadFile");
-  var $mainWrap = $("#mainForm");
+  var $uploadFileInput = $('#uploadFile');
+  var $mainWrap = $('#mainForm');
   var $downloadLink = $('#imgDownload');
   var $urlInput = $('#urlInput');
   var $modal = $('#modal');
@@ -19,13 +19,14 @@ $(function () {
         method: 'GET',
         cache: 'no-cache',
         headers: {
-          "Content-Type": "image/jpeg"
+          'Content-Type': 'image/jpeg'
         }
       }).then(res => {
         console.log(res);
       }).catch(e => {
         console.error(e);
       });
+      console.log(getImg);
     } else {
       console.log('hey');
     }
@@ -33,21 +34,21 @@ $(function () {
 
   $submitURLButton.on('click', fetchDownload);
 
-  $modal.find('.modal-close').on('click', (e) => {
+  $modal.find('.modal-close').on('click', () => {
     $modal.removeClass('is-active');
     $uploadFileInput.val('');
   });
 
   
   function processFile(file) {
-    var rotateCheck = $("#rotateCheck").prop("checked");
-    $mainWrap.addClass("loading");
+    var rotateCheck = $('#rotateCheck').prop('checked');
+    $mainWrap.addClass('loading');
 
-    var img = document.createElement("img");
-    img.classList.add("sr-only-thumb-img");
+    var img = document.createElement('img');
+    img.classList.add('sr-only-thumb-img');
     img.id = file.name;
     var reader = new FileReader();
-    var canvas = document.createElement("canvas");
+    var canvas = document.createElement('canvas');
     reader.readAsDataURL(file);
 
     reader.onload = (event) => {
@@ -59,7 +60,7 @@ $(function () {
       }
     };
 
-    var ctx = canvas.getContext("2d");
+    var ctx = canvas.getContext('2d');
 
     if (ctx) {
       setTimeout(() => {
@@ -81,11 +82,11 @@ $(function () {
           ctx.drawImage(currentImg, -1832, 0, 3366, 2100);
         }
 
-        $("#mainImage").attr("src", canvas.toDataURL("image/png"));
-        $downloadLink.attr('href', canvas.toDataURL("image/png"));
+        $('#mainImage').attr('src', canvas.toDataURL('image/png'));
+        $downloadLink.attr('href', canvas.toDataURL('image/png'));
         $downloadLink.attr('download', file.name);
         
-        $mainWrap.removeClass("loading").addClass("loaded");
+        $mainWrap.removeClass('loading').addClass('loaded');
         $modal.addClass('is-active');
 
         var parent = currentImg.parentNode;
@@ -96,9 +97,9 @@ $(function () {
     }
   }
 
-  $uploadFileInput.on("change", function () {
-    if ($uploadFileInput.val() !== "") {
-      var imgFile = $uploadFileInput.prop("files")[0];
+  $uploadFileInput.on('change', function () {
+    if ($uploadFileInput.val() !== '') {
+      var imgFile = $uploadFileInput.prop('files')[0];
       processFile(imgFile);
     }
   });
