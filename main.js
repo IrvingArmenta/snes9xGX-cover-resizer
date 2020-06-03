@@ -1,5 +1,4 @@
 // main.js
-import 'alpinejs';
 import './styles/main.sass';
 import $ from "cash-dom";
 
