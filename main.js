@@ -45,6 +45,7 @@ $(function () {
 
   $modal.on('click', 'button, .modal-background', () => {
     clearAllData();
+  });
 
   
   function processFile(file) {
