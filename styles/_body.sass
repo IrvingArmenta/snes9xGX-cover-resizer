@@ -34,6 +34,22 @@ main
   .file-cta
     flex: 1
 
+.field
+  position: relative
+
+.loading-indicator
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 5
+  opacity: 0
+  pointer-events: none
+  transition: opacity 200ms ease-in-out
+  &.is-loading
+    opacity: 0.6
+
 footer
   flex-shrink: 0
   min-height: 60px
@@ -51,3 +67,4 @@ footer
 
 .control-input
   flex: 1
+

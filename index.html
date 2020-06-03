@@ -16,15 +16,16 @@
         <!-- MAIN FUNCTIONALITY -->
         <div class="form" id="mainForm">
           <div class="field">
+           <span id="loadingUpload" class="button loading-indicator"></span>
           <div id="file-js-example" class="file has-name">
             <label class="file-label file-upload-field">
               <input class="file-input" type="file" name="resume" id="uploadFile">
               <span class="file-cta">
-                <span class="file-label">
+                <span class="file-label is-loading">
                 Upload a Snes cover from your PC
                 </span>
               </span>
-              <span class="file-name">
+              <span class="file-name" id="fileNameInput">
                 No file uploaded
               </span>
             </label>
@@ -33,7 +34,7 @@
         <div class="field has-text-centered">
           ----- OR -----
         </div>
-         <label id="url-label">
+         <label id="url-label" for="urlInput">
           Submit download URL from the cover project
         </label>
             <div class="field has-addons" id="" aria-labelledby="url-label">
