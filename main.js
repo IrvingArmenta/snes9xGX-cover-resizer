@@ -10,6 +10,8 @@ $(function () {
   var $urlInput = $('#urlInput');
   var $modal = $('#modal');
   var $submitURLButton = $('#submitUrlButton');
+  var $fileNameInput = $('#fileNameInput');
+  var $loadingIndicator = $('#loadingUpload');
 
   function fetchDownload() {
     if ($urlInput.val() !== '') {
@@ -34,9 +36,15 @@ $(function () {
 
   $submitURLButton.on('click', fetchDownload);
 
-  $modal.find('.modal-close').on('click', () => {
+  function clearAllData() {
     $modal.removeClass('is-active');
     $uploadFileInput.val('');
+    $fileNameInput.text('No file uploaded');
+    $loadingIndicator.removeClass('is-loading');
+  }
+
+  $modal.on('click', 'button, .modal-background', () => {
+    clearAllData();
   });
 
   
@@ -99,7 +107,9 @@ $(function () {
 
   $uploadFileInput.on('change', function () {
     if ($uploadFileInput.val() !== '') {
+      $loadingIndicator.addClass('is-loading');
       var imgFile = $uploadFileInput.prop('files')[0];
+      $fileNameInput.text(imgFile.name);
       processFile(imgFile);
     }
   });
