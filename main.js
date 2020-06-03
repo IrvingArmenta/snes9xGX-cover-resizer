@@ -45,8 +45,9 @@ $(function () {
 
   $modal.on('click', 'button, .modal-background', () => {
     clearAllData();
+  });
 
-  
+
   function processFile(file) {
     var rotateCheck = $('#rotateCheck').prop('checked');
     $mainWrap.addClass('loading');
