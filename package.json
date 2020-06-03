@@ -1,0 +1,40 @@
+{
+  "name": "snes9xgx-cover-resizer",
+  "version": "1.0.0",
+  "description": "Snes games cover resizer for Snes9xGX",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrvingArmenta/snes9xGX-cover-resizer.git"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+],
+  "keywords": [
+    "snes9xGX",
+    "cash-dom",
+    "parcel",
+    "resizer",
+    "cover",
+    "wii"
+  ],
+  "author": "Irving Armenta <irving.armenta@wealth-park.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IrvingArmenta/snes9xGX-cover-resizer/issues"
+  },
+  "homepage": "https://github.com/IrvingArmenta/snes9xGX-cover-resizer#readme",
+  "dependencies": {
+    "alpinejs": "^2.3.5",
+    "bulma": "^0.8.2",
+    "cash-dom": "^7.0.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.7"
+  }
+}

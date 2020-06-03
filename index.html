@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/regular.min.css" integrity="sha256-xhLSlzXTxex6fzNDBzh5DkYvf95P9Dpfv9LpTfq4D1E=" crossorigin="anonymous" />
+    <title>Snes9xGX - Cover Resizer</title>
+  </head>
+  <body>
+    <main>
+    <section class="form-section">
+      <div class="hero">
+      <div class="hero-body">
+        <!-- MAIN FUNCTIONALITY -->
+        <div class="form" id="mainForm">
+          <div class="field">
+          <div id="file-js-example" class="file has-name">
+            <label class="file-label file-upload-field">
+              <input class="file-input" type="file" name="resume" id="uploadFile">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fa fa-upload fa-fw"></i>
+                </span>
+                <span class="file-label">
+                Upload a Snes cover from your PC
+                </span>
+              </span>
+              <span class="file-name">
+                No file uploaded
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="field has-text-centered">
+          ----- OR -----
+        </div>
+         <label id="url-label">
+          Submit download URL from the cover project
+        </label>
+            <div class="field has-addons" id="" aria-labelledby="url-label">
+              <div class="control control-input">
+                <input id="urlInput" class="input" type="text" placeholder="http://www.thecoverproject.net/download_cover.php?src=cdn&cover_id=10857...">
+              </div>
+              <div class="control">
+                <button class="button is-info" id="submitUrlButton">
+                  Get image
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="field has-text-centered">
+          <label class="checkbox">
+            <input type="checkbox" checked="checked" id="rotateCheck">
+            Rotate Image
+          </label>
+        </div>
+        </div>
+        <!-- MAIN FUNCTIONALITY : END -->
+        <div class="modal" id="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <a id="imgDownload">
+              <img id="mainImage"/>
+            </a>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+    </div>
+    </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+      <script src="./main.js"></script>
+  </body>
+</html>
