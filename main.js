@@ -47,7 +47,7 @@ $(function () {
     clearAllData();
   });
 
-  
+
   function processFile(file) {
     var rotateCheck = $('#rotateCheck').prop('checked');
     $mainWrap.addClass('loading');

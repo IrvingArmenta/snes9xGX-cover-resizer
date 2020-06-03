@@ -36,7 +36,9 @@
   "devDependencies": {
     "eslint": "^7.1.0",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-inliner": "^1.0.14",
     "parcel-plugin-purgecss": "^3.0.0",
+    "posthtml-modules": "^0.6.0",
     "sass": "^1.26.7"
   }
 }
